@@ -1,0 +1,611 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="GAMEZONE is a modern gaming hub built for competition, tournaments, and community." />
+    <title>GAMEZONE | Esports & Gaming</title>
+    <link rel="icon" type="image/svg+xml" href="./assets/favicon/favicon.svg" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: '#facc15',
+              dark: '#050505',
+              panel: '#111111',
+              panelAlt: '#191919'
+            },
+            boxShadow: {
+              glow: '0 0 30px rgba(250, 204, 21, 0.35)',
+              soft: '0 20px 45px rgba(0, 0, 0, 0.45)'
+            }
+          }
+        }
+      };
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link rel="stylesheet" href="./css/input.css?v=2" />
+  </head>
+  <body class="bg-dark text-white antialiased selection:bg-yellow-400 selection:text-black">
+    <nav class="sticky top-0 z-50 border-b border-white/10 bg-black/80 backdrop-blur-md">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="flex h-20 items-center justify-between">
+          <a href="#home" class="flex items-center gap-3 text-xl font-black tracking-[0.25em] text-yellow-400">
+            <span class="flex h-9 w-9 items-center justify-center rounded-xl bg-yellow-400 text-lg font-black text-black shadow-glow">G</span>
+            GAMEZONE
+          </a>
+
+          <div class="hidden items-center gap-8 md:flex">
+            <a href="#home" class="nav-link active text-sm font-semibold uppercase tracking-[0.2em] text-yellow-300">Home</a>
+            <a href="#games" class="nav-link text-sm font-semibold uppercase tracking-[0.2em] text-white/80 hover:text-white">Games</a>
+            <a href="#features" class="nav-link text-sm font-semibold uppercase tracking-[0.2em] text-white/80 hover:text-white">Features</a>
+            <a href="#faq" class="nav-link text-sm font-semibold uppercase tracking-[0.2em] text-white/80 hover:text-white">FAQ</a>
+          </div>
+
+          <div class="hidden md:flex">
+            <a href="#games" class="rounded-full bg-yellow-400 px-6 py-3 text-sm font-bold uppercase tracking-[0.16em] text-black transition hover:bg-yellow-300">Join Now</a>
+          </div>
+
+          <button
+            type="button"
+            class="flex h-11 w-11 items-center justify-center rounded-full border border-white/15 bg-white/5 text-lg text-white md:hidden"
+            aria-label="Toggle navigation menu"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+            data-nav-toggle
+          >
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+
+        <div id="mobile-menu" class="hidden border-t border-white/10 pb-4 pt-4 md:hidden">
+          <div class="flex flex-col gap-3">
+            <a href="#home" class="mobile-nav-link active text-sm font-semibold uppercase tracking-[0.2em] text-yellow-300">Home</a>
+            <a href="#games" class="mobile-nav-link text-sm font-semibold uppercase tracking-[0.2em] text-white/80">Games</a>
+            <a href="#features" class="mobile-nav-link text-sm font-semibold uppercase tracking-[0.2em] text-white/80">Features</a>
+            <a href="#faq" class="mobile-nav-link text-sm font-semibold uppercase tracking-[0.2em] text-white/80">FAQ</a>
+            <a href="#games" class="mt-2 inline-flex w-fit rounded-full bg-yellow-400 px-5 py-3 text-xs font-black uppercase tracking-[0.2em] text-black">Join Now</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <main class="overflow-x-hidden">
+      <section id="home" class="relative overflow-hidden py-20 md:py-28">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div class="grid items-center gap-12 lg:grid-cols-2">
+            <div class="reveal space-y-8">
+              <span class="inline-flex rounded-full border border-yellow-400/30 bg-yellow-400/10 px-4 py-2 text-xs font-bold uppercase tracking-[0.26em] text-yellow-200">Next Level Gaming</span>
+              <h1 class="max-w-xl text-4xl font-black leading-none text-white sm:text-5xl lg:text-7xl">
+                Own the arena.
+                <span class="block text-yellow-400">Win every match.</span>
+              </h1>
+              <p class="max-w-lg text-base text-slate-300 sm:text-lg">
+                Join elite squads, discover top-tier tournaments, and level up your gaming experience with a community built for champions.
+              </p>
+              <div class="flex flex-wrap gap-4">
+                <a href="#games" class="rounded-full bg-yellow-400 px-7 py-3.5 text-sm font-bold uppercase tracking-[0.2em] text-black transition">Play Now</a>
+                <a href="#features" class="rounded-full border border-white/15 bg-white/5 px-7 py-3.5 text-sm font-bold uppercase tracking-[0.2em] text-white transition">Explore</a>
+              </div>
+              <div class="flex flex-wrap gap-8 pt-4 text-sm text-slate-300">
+                <div>
+                  <div class="text-2xl font-black text-white">24K+</div>
+                  <div class="uppercase tracking-[0.2em] text-slate-400">Players</div>
+                </div>
+                <div>
+                  <div class="text-2xl font-black text-white">320+</div>
+                  <div class="uppercase tracking-[0.2em] text-slate-400">Matches</div>
+                </div>
+                <div>
+                  <div class="text-2xl font-black text-white">12</div>
+                  <div class="uppercase tracking-[0.2em] text-slate-400">Regions</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="reveal relative">
+              <div class="hero-panel relative overflow-hidden rounded-[2rem] border border-yellow-400/20 bg-gradient-to-br from-zinc-900 via-black to-zinc-900 p-4 shadow-soft">
+                <div class="relative overflow-hidden rounded-[1.5rem] border border-white/10 bg-[#0d0d10] p-4">
+                  <img
+                    src="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=900&q=80"
+                    alt="Gaming arena scene"
+                    class="h-[460px] w-full rounded-[1.25rem] object-cover"
+                  />
+                  <div class="absolute inset-x-6 bottom-6 rounded-2xl border border-yellow-400/30 bg-black/70 p-4 backdrop-blur">
+                    <div class="flex items-center justify-between gap-3">
+                      <div>
+                        <p class="text-[10px] uppercase tracking-[0.28em] text-yellow-300">Live event</p>
+                        <h2 class="mt-2 text-xl font-black text-white">Champions Clash</h2>
+                      </div>
+                      <span class="rounded-full bg-yellow-400 px-3 py-1 text-xs font-black uppercase tracking-[0.18em] text-black">LIVE</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="reveal mt-16">
+            <div class="relative overflow-hidden rounded-[2rem] border border-white/10 bg-white/5 p-4 shadow-soft" data-carousel>
+              <div class="relative h-[300px] overflow-hidden rounded-[1.5rem] md:h-[360px]">
+                <article class="carousel-slide active absolute inset-0 opacity-100">
+                  <div class="grid h-full gap-5 bg-gradient-to-r from-[#0f172a] via-[#171717] to-[#111827] md:grid-cols-[1.1fr_0.9fr]">
+                    <div class="flex flex-col justify-center p-6 md:p-10">
+                      <p class="text-xs font-bold uppercase tracking-[0.28em] text-yellow-300">Featured Event</p>
+                      <h3 class="mt-4 text-2xl font-black text-white md:text-4xl">Fall Showdown 2026</h3>
+                      <p class="mt-4 max-w-md text-sm text-slate-300 md:text-base">
+                        Watch the worldâ€™s top squads battle for glory in a cinematic championship weekend full of action and energy.
+                      </p>
+                      <div class="mt-6 flex flex-wrap gap-3">
+                        <span class="rounded-full bg-yellow-400 px-3 py-1 text-[10px] font-black uppercase tracking-[0.22em] text-black">Arena</span>
+                        <span class="rounded-full border border-white/15 px-3 py-1 text-[10px] uppercase tracking-[0.22em] text-slate-300">Prize Pool: $250K</span>
+                      </div>
+                    </div>
+                    <div class="relative h-full min-h-[180px]">
+                      <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=900&q=80" alt="Competitive gaming arena" class="h-full w-full object-cover" />
+                    </div>
+                  </div>
+                </article>
+
+                <article class="carousel-slide absolute inset-0 opacity-0">
+                  <div class="grid h-full gap-5 bg-gradient-to-r from-[#111827] via-[#171717] to-[#0f172a] md:grid-cols-[1.1fr_0.9fr]">
+                    <div class="flex flex-col justify-center p-6 md:p-10">
+                      <p class="text-xs font-bold uppercase tracking-[0.28em] text-yellow-300">New Season</p>
+                      <h3 class="mt-4 text-2xl font-black text-white md:text-4xl">Ranked Battles</h3>
+                      <p class="mt-4 max-w-md text-sm text-slate-300 md:text-base">
+                        Push your rank, build chemistry with teammates, and join thrilling night matches that test precision and strategy.
+                      </p>
+                      <div class="mt-6 flex flex-wrap gap-3">
+                        <span class="rounded-full bg-yellow-400 px-3 py-1 text-[10px] font-black uppercase tracking-[0.22em] text-black">Ranked</span>
+                        <span class="rounded-full border border-white/15 px-3 py-1 text-[10px] uppercase tracking-[0.22em] text-slate-300">7v7 Arena</span>
+                      </div>
+                    </div>
+                    <div class="relative h-full min-h-[180px]">
+                      <img src="https://images.unsplash.com/photo-1593305841991-05c297ba4575?auto=format&fit=crop&w=900&q=80" alt="Team gaming setup" class="h-full w-full object-cover" />
+                    </div>
+                  </div>
+                </article>
+
+                <article class="carousel-slide absolute inset-0 opacity-0">
+                  <div class="grid h-full gap-5 bg-gradient-to-r from-[#0f172a] via-[#191919] to-[#111827] md:grid-cols-[1.1fr_0.9fr]">
+                    <div class="flex flex-col justify-center p-6 md:p-10">
+                      <p class="text-xs font-bold uppercase tracking-[0.28em] text-yellow-300">Creator Spotlight</p>
+                      <h3 class="mt-4 text-2xl font-black text-white md:text-4xl">Streamers & Teams</h3>
+                      <p class="mt-4 max-w-md text-sm text-slate-300 md:text-base">
+                        Follow top players, track live events, and connect with the community behind the most exciting tournaments in the scene.
+                      </p>
+                      <div class="mt-6 flex flex-wrap gap-3">
+                        <span class="rounded-full bg-yellow-400 px-3 py-1 text-[10px] font-black uppercase tracking-[0.22em] text-black">Creator</span>
+                        <span class="rounded-full border border-white/15 px-3 py-1 text-[10px] uppercase tracking-[0.22em] text-slate-300">Live Streams</span>
+                      </div>
+                    </div>
+                    <div class="relative h-full min-h-[180px]">
+                      <img src="https://images.unsplash.com/photo-1493711662062-fa541adb3fc8?auto=format&fit=crop&w=900&q=80" alt="Gaming streamer scene" class="h-full w-full object-cover" />
+                    </div>
+                  </div>
+                </article>
+              </div>
+
+              <button type="button" class="absolute left-4 top-1/2 flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full border border-white/15 bg-black/40 text-base text-white transition" data-carousel-prev aria-label="Previous slide">
+                <i class="fa-solid fa-chevron-left"></i>
+              </button>
+              <button type="button" class="absolute right-4 top-1/2 flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full border border-white/15 bg-black/40 text-base text-white transition" data-carousel-next aria-label="Next slide">
+                <i class="fa-solid fa-chevron-right"></i>
+              </button>
+
+              <div class="absolute bottom-5 left-1/2 z-20 flex -translate-x-1/2 items-center gap-3">
+                <button type="button" class="h-3 w-8 rounded-full bg-yellow-400 transition-all duration-300" data-carousel-indicator="0" aria-label="Go to slide 1" aria-current="true"></button>
+                <button type="button" class="h-3 w-3 rounded-full bg-white/40 transition-all duration-300" data-carousel-indicator="1" aria-label="Go to slide 2" aria-current="false"></button>
+                <button type="button" class="h-3 w-3 rounded-full bg-white/40 transition-all duration-300" data-carousel-indicator="2" aria-label="Go to slide 3" aria-current="false"></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="games" class="py-20 md:py-24">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div class="reveal text-center">
+            <p class="text-xs font-bold uppercase tracking-[0.28em] text-yellow-300">Featured Titles</p>
+            <h2 class="mt-4 text-3xl font-black text-white md:text-5xl">Popular Games</h2>
+          </div>
+
+          <div class="mt-12 grid gap-8 sm:grid-cols-2 xl:grid-cols-3">
+            <article class="game-card reveal group relative overflow-hidden rounded-[1.75rem] border border-white/10 bg-[#101010] shadow-soft">
+              <div class="relative overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=900&q=80" alt="Apex tactical shooter" class="h-64 w-full object-cover" />
+              </div>
+              <div class="relative space-y-5 p-6">
+                <div class="flex items-center justify-between gap-3">
+                  <span class="rounded-full border border-yellow-400/30 bg-yellow-400/10 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.22em] text-yellow-200">Action</span>
+                  <span class="text-sm font-bold text-yellow-300">4.9 â˜…</span>
+                </div>
+                <div>
+                  <h3 class="text-2xl font-black text-white">Apex Strike</h3>
+                  <p class="mt-3 text-sm leading-6 text-slate-300">Fast, tactical, and built for precision squad play in high-risk firefights.</p>
+                </div>
+                <button type="button" class="inline-flex rounded-full bg-yellow-400 px-5 py-2.5 text-xs font-black uppercase tracking-[0.2em] text-black transition">Explore</button>
+              </div>
+            </article>
+
+            <article class="game-card reveal group relative overflow-hidden rounded-[1.75rem] border border-white/10 bg-[#101010] shadow-soft">
+              <div class="relative overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1511884642898-4c92249e20b6?auto=format&fit=crop&w=900&q=80" alt="Racer game concept" class="h-64 w-full object-cover" />
+              </div>
+              <div class="relative space-y-5 p-6">
+                <div class="flex items-center justify-between gap-3">
+                  <span class="rounded-full border border-yellow-400/30 bg-yellow-400/10 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.22em] text-yellow-200">Racing</span>
+                  <span class="text-sm font-bold text-yellow-300">4.8 â˜…</span>
+                </div>
+                <div>
+                  <h3 class="text-2xl font-black text-white">Night Rush</h3>
+                  <p class="mt-3 text-sm leading-6 text-slate-300">Launch into neon highways, drift through checkpoints, and dominate every race.</p>
+                </div>
+                <button type="button" class="inline-flex rounded-full bg-yellow-400 px-5 py-2.5 text-xs font-black uppercase tracking-[0.2em] text-black transition">Explore</button>
+              </div>
+            </article>
+
+            <article class="game-card reveal group relative overflow-hidden rounded-[1.75rem] border border-white/10 bg-[#101010] shadow-soft">
+              <div class="relative overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1603481546238-487240415921?auto=format&fit=crop&w=900&q=80" alt="Fantasy battle game" class="h-64 w-full object-cover" />
+              </div>
+              <div class="relative space-y-5 p-6">
+                <div class="flex items-center justify-between gap-3">
+                  <span class="rounded-full border border-yellow-400/30 bg-yellow-400/10 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.22em] text-yellow-200">Fantasy</span>
+                  <span class="text-sm font-bold text-yellow-300">4.7 â˜…</span>
+                </div>
+                <div>
+                  <h3 class="text-2xl font-black text-white">Dragon Rift</h3>
+                  <p class="mt-3 text-sm leading-6 text-slate-300">Collect legendary power, battle dungeon bosses, and claim epic rewards.</p>
+                </div>
+                <button type="button" class="inline-flex rounded-full bg-yellow-400 px-5 py-2.5 text-xs font-black uppercase tracking-[0.2em] text-black transition">Explore</button>
+              </div>
+            </article>
+
+            <article class="game-card reveal group relative overflow-hidden rounded-[1.75rem] border border-white/10 bg-[#101010] shadow-soft">
+              <div class="relative overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1598550476439-6847785fcea6?auto=format&fit=crop&w=900&q=80" alt="Strategy game concept" class="h-64 w-full object-cover" />
+              </div>
+              <div class="relative space-y-5 p-6">
+                <div class="flex items-center justify-between gap-3">
+                  <span class="rounded-full border border-yellow-400/30 bg-yellow-400/10 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.22em] text-yellow-200">Strategy</span>
+                  <span class="text-sm font-bold text-yellow-300">4.9 â˜…</span>
+                </div>
+                <div>
+                  <h3 class="text-2xl font-black text-white">Iron Dominion</h3>
+                  <p class="mt-3 text-sm leading-6 text-slate-300">Command your faction, conquer forts, and manage every battlefield move.</p>
+                </div>
+                <button type="button" class="inline-flex rounded-full bg-yellow-400 px-5 py-2.5 text-xs font-black uppercase tracking-[0.2em] text-black transition">Explore</button>
+              </div>
+            </article>
+
+            <article class="game-card reveal group relative overflow-hidden rounded-[1.75rem] border border-white/10 bg-[#101010] shadow-soft">
+              <div class="relative overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1517423440428-a5a00ad493e8?auto=format&fit=crop&w=900&q=80" alt="Battle arena game" class="h-64 w-full object-cover" />
+              </div>
+              <div class="relative space-y-5 p-6">
+                <div class="flex items-center justify-between gap-3">
+                  <span class="rounded-full border border-yellow-400/30 bg-yellow-400/10 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.22em] text-yellow-200">Arena</span>
+                  <span class="text-sm font-bold text-yellow-300">4.8 â˜…</span>
+                </div>
+                <div>
+                  <h3 class="text-2xl font-black text-white">Titan Clash</h3>
+                  <p class="mt-3 text-sm leading-6 text-slate-300">Fight for control in explosive team battles packed with power-ups and pressure.</p>
+                </div>
+                <button type="button" class="inline-flex rounded-full bg-yellow-400 px-5 py-2.5 text-xs font-black uppercase tracking-[0.2em] text-black transition">Explore</button>
+              </div>
+            </article>
+
+            <article class="game-card reveal group relative overflow-hidden rounded-[1.75rem] border border-white/10 bg-[#101010] shadow-soft">
+              <div class="relative overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1535223289827-42f1e9919769?auto=format&fit=crop&w=900&q=80" alt="MMO world" class="h-64 w-full object-cover" />
+              </div>
+              <div class="relative space-y-5 p-6">
+                <div class="flex items-center justify-between gap-3">
+                  <span class="rounded-full border border-yellow-400/30 bg-yellow-400/10 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.22em] text-yellow-200">MMO</span>
+                  <span class="text-sm font-bold text-yellow-300">4.6 â˜…</span>
+                </div>
+                <div>
+                  <h3 class="text-2xl font-black text-white">Skybound</h3>
+                  <p class="mt-3 text-sm leading-6 text-slate-300">Build your empire, unlock worlds, and challenge guilds across massive maps.</p>
+                </div>
+                <button type="button" class="inline-flex rounded-full bg-yellow-400 px-5 py-2.5 text-xs font-black uppercase tracking-[0.2em] text-black transition">Explore</button>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="features" class="py-20 md:py-24">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div class="reveal text-center">
+            <p class="text-xs font-bold uppercase tracking-[0.28em] text-yellow-300">Built for champions</p>
+            <h2 class="mt-4 text-3xl font-black text-white md:text-5xl">Why gamers choose GAMEZONE</h2>
+          </div>
+
+          <div class="mt-12 grid gap-8 md:grid-cols-2 xl:grid-cols-4">
+            <article class="feature-card reveal relative overflow-hidden rounded-[1.5rem] border border-white/10 bg-[#111111] p-6 shadow-soft">
+              <div class="relative z-10">
+                <div class="mb-5 inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-yellow-400 text-xl text-black shadow-glow">
+                  <i class="fa-solid fa-trophy"></i>
+                </div>
+                <h3 class="text-xl font-black text-white">Competitive Gaming</h3>
+                <p class="mt-3 text-sm leading-6 text-slate-300">Compete in intense tournaments and sharpen your strategy in every ranked match.</p>
+              </div>
+            </article>
+
+            <article class="feature-card reveal relative overflow-hidden rounded-[1.5rem] border border-white/10 bg-[#111111] p-6 shadow-soft">
+              <div class="relative z-10">
+                <div class="mb-5 inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-yellow-400 text-xl text-black shadow-glow">
+                  <i class="fa-solid fa-medal"></i>
+                </div>
+                <h3 class="text-xl font-black text-white">Global Tournaments</h3>
+                <p class="mt-3 text-sm leading-6 text-slate-300">Track events across continents and join elite competitions from anywhere in the world.</p>
+              </div>
+            </article>
+
+            <article class="feature-card reveal relative overflow-hidden rounded-[1.5rem] border border-white/10 bg-[#111111] p-6 shadow-soft">
+              <div class="relative z-10">
+                <div class="mb-5 inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-yellow-400 text-xl text-black shadow-glow">
+                  <i class="fa-solid fa-user-astronaut"></i>
+                </div>
+                <h3 class="text-xl font-black text-white">Pro Players</h3>
+                <p class="mt-3 text-sm leading-6 text-slate-300">Learn from top-tier talent, watch their strategies, and improve your own gameplay every day.</p>
+              </div>
+            </article>
+
+            <article class="feature-card reveal relative overflow-hidden rounded-[1.5rem] border border-white/10 bg-[#111111] p-6 shadow-soft">
+              <div class="relative z-10">
+                <div class="mb-5 inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-yellow-400 text-xl text-black shadow-glow">
+                  <i class="fa-solid fa-users"></i>
+                </div>
+                <h3 class="text-xl font-black text-white">Gaming Community</h3>
+                <p class="mt-3 text-sm leading-6 text-slate-300">Meet players, form squads, and stay connected with creators, teams, and communities.</p>
+              </div>
+            </article>
+          </div>
+
+          <div class="reveal mt-16 rounded-[2rem] border border-white/10 bg-[#111111] p-6 shadow-soft md:p-8">
+            <div class="mb-8 text-center">
+              <p class="text-xs font-bold uppercase tracking-[0.28em] text-yellow-300">Join the arena</p>
+              <h3 class="mt-3 text-3xl font-black text-white md:text-4xl">Gaming Registration</h3>
+            </div>
+
+            <form id="gaming-registration-form" class="space-y-5" novalidate>
+              <div class="grid gap-5 md:grid-cols-2">
+                <div>
+                  <label for="full-name" class="mb-2 block text-xs font-bold uppercase tracking-[0.22em] text-slate-200">Full Name</label>
+                  <input id="full-name" name="fullName" type="text" class="w-full rounded-xl border border-white/10 bg-black/40 px-4 py-3 text-white outline-none transition focus:border-yellow-400 focus:ring-2 focus:ring-yellow-400/40" placeholder="Your name" />
+                </div>
+
+                <div>
+                  <label for="email" class="mb-2 block text-xs font-bold uppercase tracking-[0.22em] text-slate-200">Email</label>
+                  <input id="email" name="email" type="email" class="w-full rounded-xl border border-white/10 bg-black/40 px-4 py-3 text-white outline-none transition focus:border-yellow-400 focus:ring-2 focus:ring-yellow-400/40" placeholder="you@example.com" />
+                </div>
+
+                <div>
+                  <label for="password" class="mb-2 block text-xs font-bold uppercase tracking-[0.22em] text-slate-200">Password</label>
+                  <input id="password" name="password" type="password" class="w-full rounded-xl border border-white/10 bg-black/40 px-4 py-3 text-white outline-none transition focus:border-yellow-400 focus:ring-2 focus:ring-yellow-400/40" placeholder="Password" />
+                </div>
+
+                <div>
+                  <label for="age" class="mb-2 block text-xs font-bold uppercase tracking-[0.22em] text-slate-200">Age</label>
+                  <input id="age" name="age" type="number" min="13" class="w-full rounded-xl border border-white/10 bg-black/40 px-4 py-3 text-white outline-none transition focus:border-yellow-400 focus:ring-2 focus:ring-yellow-400/40" placeholder="18" />
+                </div>
+
+                <div>
+                  <label for="favorite-game" class="mb-2 block text-xs font-bold uppercase tracking-[0.22em] text-slate-200">Favorite Game</label>
+                  <select id="favorite-game" name="favoriteGame" class="w-full rounded-xl border border-white/10 bg-black/40 px-4 py-3 text-white outline-none transition focus:border-yellow-400 focus:ring-2 focus:ring-yellow-400/40">
+                    <option value="">Select game</option>
+                    <option value="Apex Strike">Apex Strike</option>
+                    <option value="Night Rush">Night Rush</option>
+                    <option value="Dragon Rift">Dragon Rift</option>
+                    <option value="Titan Clash">Titan Clash</option>
+                    <option value="Skybound">Skybound</option>
+                  </select>
+                </div>
+
+                <div>
+                  <label class="mb-2 block text-xs font-bold uppercase tracking-[0.22em] text-slate-200">Level</label>
+                  <div class="flex flex-wrap gap-3 rounded-xl border border-white/10 bg-black/40 px-3 py-3">
+                    <label class="inline-flex items-center gap-2 text-sm text-slate-200">
+                      <input type="radio" name="gamingLevel" value="Beginner" class="h-4 w-4 accent-yellow-400" />
+                      <span>Beginner</span>
+                    </label>
+                    <label class="inline-flex items-center gap-2 text-sm text-slate-200">
+                      <input type="radio" name="gamingLevel" value="Intermediate" class="h-4 w-4 accent-yellow-400" />
+                      <span>Intermediate</span>
+                    </label>
+                    <label class="inline-flex items-center gap-2 text-sm text-slate-200">
+                      <input type="radio" name="gamingLevel" value="Advanced" class="h-4 w-4 accent-yellow-400" />
+                      <span>Advanced</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <label class="mb-2 block text-xs font-bold uppercase tracking-[0.22em] text-slate-200">Interests</label>
+                <div class="grid gap-3 sm:grid-cols-2 md:grid-cols-4">
+                  <label class="flex items-center gap-2 rounded-xl border border-white/10 bg-black/40 px-3 py-3 text-sm text-slate-200">
+                    <input type="checkbox" name="interests" value="Esports" class="h-4 w-4 accent-yellow-400" />
+                    <span>Esports</span>
+                  </label>
+                  <label class="flex items-center gap-2 rounded-xl border border-white/10 bg-black/40 px-3 py-3 text-sm text-slate-200">
+                    <input type="checkbox" name="interests" value="Tournaments" class="h-4 w-4 accent-yellow-400" />
+                    <span>Tournaments</span>
+                  </label>
+                  <label class="flex items-center gap-2 rounded-xl border border-white/10 bg-black/40 px-3 py-3 text-sm text-slate-200">
+                    <input type="checkbox" name="interests" value="Multiplayer" class="h-4 w-4 accent-yellow-400" />
+                    <span>Multiplayer</span>
+                  </label>
+                  <label class="flex items-center gap-2 rounded-xl border border-white/10 bg-black/40 px-3 py-3 text-sm text-slate-200">
+                    <input type="checkbox" name="interests" value="Streaming" class="h-4 w-4 accent-yellow-400" />
+                    <span>Streaming</span>
+                  </label>
+                </div>
+              </div>
+
+              <div class="grid gap-5 md:grid-cols-2">
+                <div>
+                  <label for="tournament-date" class="mb-2 block text-xs font-bold uppercase tracking-[0.22em] text-slate-200">Tournament Date</label>
+                  <input id="tournament-date" name="tournamentDate" type="date" class="w-full rounded-xl border border-white/10 bg-black/40 px-4 py-3 text-white outline-none transition focus:border-yellow-400 focus:ring-2 focus:ring-yellow-400/40" />
+                </div>
+
+                <div>
+                  <label for="profile-image" class="mb-2 block text-xs font-bold uppercase tracking-[0.22em] text-slate-200">Profile Image</label>
+                  <input id="profile-image" name="profileImage" type="file" class="block w-full rounded-xl border border-dashed border-white/20 bg-black/40 px-4 py-3 text-sm text-slate-200 file:mr-3 file:rounded-full file:border-0 file:bg-yellow-400 file:px-4 file:py-2 file:text-xs file:font-black file:uppercase file:tracking-[0.2em] file:text-black" />
+                </div>
+              </div>
+
+              <div>
+                <label class="mb-2 block text-xs font-bold uppercase tracking-[0.22em] text-slate-200">Username</label>
+                <div class="flex items-stretch overflow-hidden rounded-xl border border-white/10 bg-black/40">
+                  <span class="flex items-center justify-center bg-yellow-400 px-4 text-lg font-black text-black">@</span>
+                  <input type="text" name="username" placeholder="playername" class="w-full bg-transparent px-4 py-3 text-white outline-none placeholder:text-slate-500 focus:ring-0" />
+                </div>
+              </div>
+
+              <div>
+                <label for="message" class="mb-2 block text-xs font-bold uppercase tracking-[0.22em] text-slate-200">Notes</label>
+                <textarea id="message" name="message" rows="4" class="w-full rounded-xl border border-white/10 bg-black/40 px-4 py-3 text-white outline-none transition focus:border-yellow-400 focus:ring-2 focus:ring-yellow-400/40" placeholder="Add a short note..."></textarea>
+              </div>
+
+              <div class="rounded-xl border border-white/10 bg-black/40 px-4 py-3">
+                <label class="flex items-start gap-3 text-sm text-slate-200">
+                  <input type="checkbox" name="terms" class="mt-1 h-4 w-4 accent-yellow-400" />
+                  <span>I agree to the terms and conditions.</span>
+                </label>
+              </div>
+
+              <div class="flex flex-col gap-4 sm:flex-row">
+                <button type="submit" class="inline-flex items-center justify-center rounded-full bg-yellow-400 px-7 py-3 text-sm font-black uppercase tracking-[0.22em] text-black transition focus:outline-none focus:ring-2 focus:ring-yellow-400/50">Submit</button>
+                <button type="reset" class="inline-flex items-center justify-center rounded-full border border-white/15 bg-black/40 px-7 py-3 text-sm font-black uppercase tracking-[0.22em] text-white transition focus:outline-none focus:ring-2 focus:ring-yellow-400/50">Reset</button>
+              </div>
+
+              <div id="form-status" class="hidden rounded-xl border border-yellow-400/30 bg-yellow-400/10 px-4 py-3 text-sm font-medium text-yellow-200" aria-live="polite">
+                Registration submitted successfully.
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <section id="faq" class="py-20 md:py-24">
+        <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+          <div class="reveal text-center">
+            <p class="text-xs font-bold uppercase tracking-[0.28em] text-yellow-300">Need help?</p>
+            <h2 class="mt-4 text-3xl font-black text-white md:text-5xl">Frequently Asked Questions</h2>
+          </div>
+
+          <div class="mt-12 space-y-4">
+            <div class="reveal overflow-hidden rounded-[1.25rem] border border-white/10 bg-[#111111]">
+              <button type="button" class="flex w-full items-center justify-between gap-4 px-5 py-5 text-left text-lg font-bold text-white" data-faq-button aria-expanded="true">
+                <span>How can I join the gaming community?</span>
+                <span class="faq-icon inline-flex h-8 w-8 items-center justify-center rounded-full border border-white/10 bg-white/5 text-yellow-300 transition-transform duration-300"><i class="fa-solid fa-chevron-down"></i></span>
+              </button>
+              <div class="faq-panel px-5 text-sm leading-7 text-slate-300" style="max-height: 200px;">
+                Simply create an account, verify your profile, and join the community hub to connect with players, teams, and tournament organizers.
+              </div>
+            </div>
+
+            <div class="reveal overflow-hidden rounded-[1.25rem] border border-white/10 bg-[#111111]">
+              <button type="button" class="flex w-full items-center justify-between gap-4 px-5 py-5 text-left text-lg font-bold text-white" data-faq-button aria-expanded="false">
+                <span>Are tournaments free?</span>
+                <span class="faq-icon inline-flex h-8 w-8 items-center justify-center rounded-full border border-white/10 bg-white/5 text-yellow-300 transition-transform duration-300"><i class="fa-solid fa-chevron-down"></i></span>
+              </button>
+              <div class="faq-panel px-5 text-sm leading-7 text-slate-300" style="max-height: 0px; opacity: 0;">
+                Many community events are free, while premium tournaments may include entry fees and bigger prize pools depending on the event.
+              </div>
+            </div>
+
+            <div class="reveal overflow-hidden rounded-[1.25rem] border border-white/10 bg-[#111111]">
+              <button type="button" class="flex w-full items-center justify-between gap-4 px-5 py-5 text-left text-lg font-bold text-white" data-faq-button aria-expanded="false">
+                <span>Can beginners participate?</span>
+                <span class="faq-icon inline-flex h-8 w-8 items-center justify-center rounded-full border border-white/10 bg-white/5 text-yellow-300 transition-transform duration-300"><i class="fa-solid fa-chevron-down"></i></span>
+              </button>
+              <div class="faq-panel px-5 text-sm leading-7 text-slate-300" style="max-height: 0px; opacity: 0;">
+                Absolutely. We welcome beginners and offer beginner-friendly brackets, skill-based matchmaking, and onboarding tips for new players.
+              </div>
+            </div>
+
+            <div class="reveal overflow-hidden rounded-[1.25rem] border border-white/10 bg-[#111111]">
+              <button type="button" class="flex w-full items-center justify-between gap-4 px-5 py-5 text-left text-lg font-bold text-white" data-faq-button aria-expanded="false">
+                <span>How can I join a team?</span>
+                <span class="faq-icon inline-flex h-8 w-8 items-center justify-center rounded-full border border-white/10 bg-white/5 text-yellow-300 transition-transform duration-300"><i class="fa-solid fa-chevron-down"></i></span>
+              </button>
+              <div class="faq-panel px-5 text-sm leading-7 text-slate-300" style="max-height: 0px; opacity: 0;">
+                Browse active teams, send a message through your squad profile, and connect with captains looking for new members or specific roles.
+              </div>
+            </div>
+
+            <div class="reveal overflow-hidden rounded-[1.25rem] border border-white/10 bg-[#111111]">
+              <button type="button" class="flex w-full items-center justify-between gap-4 px-5 py-5 text-left text-lg font-bold text-white" data-faq-button aria-expanded="false">
+                <span>Where can I find upcoming tournaments?</span>
+                <span class="faq-icon inline-flex h-8 w-8 items-center justify-center rounded-full border border-white/10 bg-white/5 text-yellow-300 transition-transform duration-300"><i class="fa-solid fa-chevron-down"></i></span>
+              </button>
+              <div class="faq-panel px-5 text-sm leading-7 text-slate-300" style="max-height: 0px; opacity: 0;">
+                Check the events dashboard, the tournament calendar, and the community feed for open registrations, bracket updates, and live schedules.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="border-t border-white/10 bg-[#070707]">
+      <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+        <div class="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
+          <div class="space-y-5">
+            <a href="#home" class="flex items-center gap-3 text-xl font-black tracking-[0.22em] text-yellow-400">
+              <span class="flex h-9 w-9 items-center justify-center rounded-xl bg-yellow-400 text-lg font-black text-black">G</span>
+              GAMEZONE
+            </a>
+            <p class="max-w-xs text-sm leading-7 text-slate-300">
+              Elite gaming experiences for players, creators, and communities chasing bigger wins and better moments.
+            </p>
+          </div>
+
+          <div>
+            <h3 class="text-sm font-black uppercase tracking-[0.26em] text-yellow-300">Quick Links</h3>
+            <ul class="mt-5 space-y-3 text-sm text-slate-300">
+              <li><a href="#home">Home</a></li>
+              <li><a href="#games">Games</a></li>
+              <li><a href="#features">Features</a></li>
+              <li><a href="#faq">FAQ</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="text-sm font-black uppercase tracking-[0.26em] text-yellow-300">Games</h3>
+            <ul class="mt-5 space-y-3 text-sm text-slate-300">
+              <li><a href="#games">Apex Strike</a></li>
+              <li><a href="#games">Night Rush</a></li>
+              <li><a href="#games">Dragon Rift</a></li>
+              <li><a href="#games">Titan Clash</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="text-sm font-black uppercase tracking-[0.26em] text-yellow-300">Follow Us</h3>
+            <div class="mt-5 flex gap-3">
+              <a href="#" aria-label="Twitter" class="flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/5 text-white transition"><i class="fa-brands fa-x-twitter"></i></a>
+              <a href="#" aria-label="Discord" class="flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/5 text-white transition"><i class="fa-brands fa-discord"></i></a>
+              <a href="#" aria-label="Twitch" class="flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/5 text-white transition"><i class="fa-brands fa-twitch"></i></a>
+              <a href="#" aria-label="YouTube" class="flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/5 text-white transition"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-10 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-6 text-sm text-slate-400 md:flex-row">
+          <p>Â© 2026 GAMEZONE. All rights reserved.</p>
+          <a href="#home" class="inline-flex items-center gap-2 rounded-full border border-yellow-400/40 bg-yellow-400/10 px-4 py-2 font-bold uppercase tracking-[0.2em] text-yellow-200 transition" id="backToTop">Back to top</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./js/main.js?v=3"></script>
+  </body>
+</html>

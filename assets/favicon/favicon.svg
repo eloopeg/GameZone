@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Gamezone favicon">
+  <defs>
+    <linearGradient id="g1" x1="0%" x2="100%" y1="0%" y2="100%">
+      <stop offset="0%" stop-color="#fde047"/>
+      <stop offset="100%" stop-color="#facc15"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="18" fill="#050505"/>
+  <rect x="8" y="8" width="48" height="48" rx="14" fill="url(#g1)"/>
+  <path d="M32 18c-8.9 0-16 7.1-16 16v8c0 8.9 7.1 16 16 16s16-7.1 16-16v-8c0-8.9-7.1-16-16-16zm0 8.5c4.1 0 7.5 3.4 7.5 7.5s-3.4 7.5-7.5 7.5-7.5-3.4-7.5-7.5 3.4-7.5 7.5-7.5zm-5.5 16.5h11v5h-11v-5zm5.5-8h7v5h-7v-5z" fill="#050505"/>
+</svg>
